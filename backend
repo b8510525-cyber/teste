@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro - ACEMADES</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<section class="cadastro-section">
+  <h2>Cadastro</h2>
+  <form id="cadastro-form">
+    <label>Nome:</label>
+    <input type="text" id="nome" required>
+    <label>Email:</label>
+    <input type="email" id="email" required>
+    <label>Senha:</label>
+    <input type="password" id="senha" required>
+    <label>Setor:</label>
+    <select id="setor" required>
+      <option value="">Selecione</option>
+      <option value="aluno">Aluno</option>
+      <option value="voluntario">Voluntário</option>
+      <option value="parceiro">Parceiro</option>
+    </select>
+    <button type="submit">Cadastrar</button>
+  </form>
+  <p>Já tem conta? <a href="login.html">Faça login</a></p>
+</section>
+
+<script src="assets/js/firebase-app.js"></script>
+<script src="assets/js/auth.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - Admin</title>
+<link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+<header>
+  <h2>Dashboard Admin</h2>
+  <button id="logout">Sair</button>
+</header>
+<main>
+  <p>Aqui você pode gerenciar alunos, voluntários e parceiros.</p>
+</main>
+
+<script src="assets/js/firebase-app.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - Usuário</title>
+<link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+<header>
+  <h2>Bem-vindo, <span id="user-name"></span></h2>
+  <button id="logout">Sair</button>
+</header>
+<main>
+  <p>Setor: <span id="user-setor"></span></p>
+  <p>Aqui você pode acompanhar suas inscrições e receber atualizações.</p>
+</main>
+
+<script src="assets/js/firebase-app.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACEMADES - ONG Educacional</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsivo.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#" onclick="scrollSection('home')">Página Inicial</a>
+    <a href="#" onclick="scrollSection('sobre')">Quem Somos</a>
+    <a href="#" onclick="scrollSection('galeria')">Galeria</a>
+    <a href="#" onclick="scrollSection('contato')">Contato</a>
+    <a href="cadastro.html">Faça Parte</a>
+  </nav>
+</header>
+
+<section id="home">
+  <h1>ACEMADES</h1>
+  <p>Bem-vindo à nossa ONG educacional.</p>
+</section>
+
+<section id="sobre">
+  <h2>Sobre Nós</h2>
+  <p>O nosso projeto tem como objetivo principal contribuir para o desenvolvimento das competências sociais e emocionais de pessoas marginalizadas e/ou em situação de vulnerabilidade. Buscamos ampliar, articular e integrar diversas políticas públicas, programas, projetos e serviços de ação sociofamiliar.</p>
+
+  <h3>Nossa Missão</h3>
+  <p>Promover o bem-estar individual e familiar, oferecendo orientação e suporte nas áreas de assistência social e jurídica, saúde, esportes e lazer, educação e cultura.</p>
+
+  <h3>Objetivos</h3>
+  <ul>
+    <li>Providenciar um espaço físico para atendimento e orientação.</li>
+    <li>Realizar atividades com profissionais qualificados.</li>
+    <li>Desenvolver atividades educacionais, culturais e sociais.</li>
+    <li>Fornecer alimentação adequada à população vulnerável.</li>
+  </ul>
+</section>
+
+<section id="galeria">
+  <h2>Galeria</h2>
+  <div class="galeria-imagens">
+    <img src="assets/img/exemplo1.jpg" alt="Foto 1">
+    <img src="assets/img/exemplo2.jpg" alt="Foto 2">
+  </div>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <p>Endereço: Av. Vicente de Carvalho 808 - Vicente de Carvalho - Rio de Janeiro - RJ CEP: 21210-024</p>
+  <p>Telefone: 21 98141-4824</p>
+  <p>E-mails:</p>
+  <ul>
+    <li>contato@acemades.org.br</li>
+    <li>diretoria@acemades.org.br</li>
+    <li>comunicacao@acemades.org.br</li>
+  </ul>
+</section>
+
+<footer>
+  <p>© 2025 ACEMADES</p>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/firebase-app.js"></script>
+<script src="assets/js/auth.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - ACEMADES</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<section class="login-section">
+  <h2>Login</h2>
+  <form id="login-form">
+    <label>Email:</label>
+    <input type="email" id="login-email" required>
+    <label>Senha:</label>
+    <input type="password" id="login-password" required>
+    <button type="submit">Entrar</button>
+  </form>
+  <p>Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+</section>
+
+<script src="assets/js/firebase-app.js"></script>
+<script src="assets/js/auth.js"></script>
+</body>
+</html>
