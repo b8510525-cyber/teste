@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro - ACEMADES</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<section class="cadastro-section">
+  <h2>Cadastro</h2>
+  <form id="cadastro-form">
+    <label>Nome:</label>
+    <input type="text" id="nome" required>
+    <label>Email:</label>
+    <input type="email" id="email" required>
+    <label>Senha:</label>
+    <input type="password" id="senha" required>
+    <label>Setor:</label>
+    <select id="setor" required>
+      <option value="">Selecione</option>
+      <option value="aluno">Aluno</option>
+      <option value="voluntario">Voluntário</option>
+      <option value="parceiro">Parceiro</option>
+    </select>
+    <button type="submit">Cadastrar</button>
+  </form>
+  <p>Já tem conta? <a href="login.html">Faça login</a></p>
+</section>
+
+<script src="assets/js/firebase-app.js"></script>
+<script src="assets/js/auth.js"></script>
+</body>
+</html>
