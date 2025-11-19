@@ -1,0 +1,4 @@
+@media(max-width:768px){
+  header nav { display:flex; flex-direction:column;}
+  .galeria-imagens img { width:100%; }
+}
